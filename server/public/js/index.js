@@ -77,16 +77,46 @@ module.exports = __webpack_require__(1);
 "use strict";
 
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _lesson = __webpack_require__(2);
 
-var Test = function Test() {
-    _classCallCheck(this, Test);
+var _lesson2 = _interopRequireDefault(_lesson);
 
-    this.a = 'hello world';
-};
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var test = new Test();
-document.body.innerHTML = test.a;
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+{
+    var arr = Array.of(3, 4, 7, 9, 11);
+    console.log('arr=', arr);
+
+    var empty = Array.of();
+    console.log(empty);
+}
+
+{
+    var p = document.querySelectorAll('p');
+    var pArr = Array.from(p);
+
+    console.log(p[0].innerHTML);
+    pArr.forEach(function (item) {
+        console.log(item);
+        // console.log(item.textContent);
+    });
+
+    console.log(Array.from([1, 3, 5], function (item) {
+        return item * 2;
+    }));
+}
+
+{
+    console.log('fill-7', [1, 'a', undefined].fill(7));
+    console.log('fill-pos', ['a', 'b', 'c', 'd', 'e'].fill(7, 1, 3));
+}
 
 /***/ })
 /******/ ]);
