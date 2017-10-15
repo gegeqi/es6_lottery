@@ -83,6 +83,14 @@ var _lesson2 = _interopRequireDefault(_lesson);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// console.log(A, test, Hello);
+console.log(_lesson2.default.A, _lesson2.default.test); // import 'babel-polyfill';
+// import lesson1 from './class/lesson17';
+
+// import {A,test,Hello} from './class/lesson17'
+
+// import * as lesson from './class/lesson17';
+
 /***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -90,33 +98,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 "use strict";
 
 
-{
-    var arr = Array.of(3, 4, 7, 9, 11);
-    console.log('arr=', arr);
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
-    var empty = Array.of();
-    console.log(empty);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// export let A = 123;
+//
+// export function test() {
+//     console.log('test');
+// }
+//
+// export class Hello{
+//     test(){
+//         console.log('class');
+//     }
+// }
+
+var A = 123;
+
+function test() {
+    console.log('test');
 }
 
-{
-    var p = document.querySelectorAll('p');
-    var pArr = Array.from(p);
+var Hello = function () {
+    function Hello() {
+        _classCallCheck(this, Hello);
+    }
 
-    console.log(p[0].innerHTML);
-    pArr.forEach(function (item) {
-        console.log(item);
-        // console.log(item.textContent);
-    });
+    _createClass(Hello, [{
+        key: 'test',
+        value: function test() {
+            console.log('class');
+        }
+    }]);
 
-    console.log(Array.from([1, 3, 5], function (item) {
-        return item * 2;
-    }));
-}
+    return Hello;
+}();
 
-{
-    console.log('fill-7', [1, 'a', undefined].fill(7));
-    console.log('fill-pos', ['a', 'b', 'c', 'd', 'e'].fill(7, 1, 3));
-}
+exports.default = {
+    A: A,
+    test: test,
+    Hello: Hello
+};
 
 /***/ })
 /******/ ]);
